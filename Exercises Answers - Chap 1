@@ -16,33 +16,65 @@ clustering, visualization,dimensionality reduction and anomaly detection
 
 6. What type of Machine Learning algorithm would you use to allow a robot to
 walk in various unknown terrains?
+reinforcement learning
 
 7. What type of algorithm would you use to segment your customers into multiple
 groups?
+KNN if we know how many groups we should have or Kmeans if we dont.
 
 8. Would you frame the problem of spam detection as a supervised learning problem or an unsupervised learning problem?
+Supervised learning
+
 9. What is an online learning system?
+Is a model wich is constantly updating it self with new data to make updated predictions
 
 10. What is out-of-core learning?
+It happens when we have more data than the computer memory can process. So the algorithm loads part of the data process it,
+run the training step on the data and repeats until the end.
 
 11. What type of learning algorithm relies on a similarity measure to make predictions?
+Instance based learning
 
 12. What is the difference between a model parameter and a learning algorithm’s
 hyperparameter?
+A model has one or more model parameters that determine what it will predict
+given a new instance (e.g., the slope of a linear model). A learning algorithm tries
+to find optimal values for these parameters such that the model generalizes well
+to new instances. A hyperparameter is a parameter of the algorithm
+not of the model 
 
 13. What do model-based learning algorithms search for? What is the most common
 strategy they use to succeed? How do they make predictions?
 
+Model-based learning algorithms search for an optimal value for the model
+parameters such that the model will generalize well to new instances. 
+
+We usually
+train such systems by minimizing a cost function that measures how bad the sys‐
+tem is at making predictions on the training data, plus a penalty for model com‐
+plexity if the model is regularized. 
+
+To make predictions, we feed the new
+instance’s features into the model’s prediction function, using the parameter val‐
+ues found by the learning algorithm.
+
 14. Can you name four of the main challenges in Machine Learning?
+insufficient quantity of training data,nonrepresentative training data, poor quality data, irrelevant features 
 
 15. If your model performs great on the training data but generalizes poorly to new
 instances, what is happening? Can you name three possible solutions?
+overfiting
 
 16. What is a test set and why would you want to use it?
-
+is the part of the data segregated to test our generalized model, if trains in the train data and tests how good it is in test data
 
 17. What is the purpose of a validation set?
+A validation set is used to compare models. It makes it possible to select the best
+model and tune the hyperparameters
 
 18. What can go wrong if you tune hyperparameters using the test set?
+It can generate overfiting in the model
 
 19. What is cross-validation and why would you prefer it to a validation set?
+Cross-validation is a technique that makes it possible to compare models (for
+model selection and hyperparameter tuning) without the need for a separate validation set. This saves precious training data.
